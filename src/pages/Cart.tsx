@@ -64,7 +64,7 @@ const Cart = () => {
     }
 
     // create order on server 
-    const response = await fetch('http://localhost:3000/create-order', {
+    const response = await fetch('https://brightframesolutionsbackend-1.onrender.com/create-order', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -98,7 +98,7 @@ const Cart = () => {
           console.log("Order Id From RazorPay", order.id);
           console.log("Order Id From Order Table", order_key);
           
-          const verifyResponse = await fetch('http://localhost:3000/verify-payment', {
+          const verifyResponse = await fetch('https://brightframesolutionsbackend-1.onrender.com/verify-payment', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
